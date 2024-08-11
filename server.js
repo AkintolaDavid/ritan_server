@@ -5,6 +5,9 @@ const cors = require("cors");
 const port = 5000;
 app.use(cors());
 app.use(bodyParser.json());
+app.get("/api/yes", (req, res) => {
+  res.send("yesss");
+});
 app.post("/api/submit_aboutus_form", (req, res) => {
   console.log(req.body); // Print the received data
   res.send("Data received");
